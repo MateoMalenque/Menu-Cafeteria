@@ -1,0 +1,270 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    padding-top: 40px; /* Asegura que el contenido no se esconda debajo del navBar */
+}
+
+.navBar{
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos */
+    justify-content: flex-start;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    max-height: 80px; /* Fija una altura máxima para el navBar */
+    overflow: hidden; /* Evita que los elementos desborden */
+    box-sizing: border-box; /* Asegura que el padding no aumente el tamaño total */
+}
+
+.navBar img {
+    width: 130px; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-right: 10px; /* Espacio entre la imagen y otros elementos */
+}
+/* Botón de abrir menú */
+#menuBtn {
+    /*position: fixed;*/
+    margin-right: 10px;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    background: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+/* Menú lateral */
+.menu {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Oculto por defecto */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    padding-top: 60px;
+    transition: 0.3s;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu ul li {
+    padding: 15px;
+    text-align: center;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.menu ul li a:hover {
+    background: #555;
+}
+
+/* Botón de cerrar */
+#closeBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.contenedorTitulo{
+    display: flex;
+    justify-content: center;
+}
+.titulo{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("img/cafes.jpg");
+    background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    height: 250px; /* Ajusta la altura del contenedor para mostrar más de la imagen */
+    width: 50%; /* Asegura que ocupe todo el ancho */
+    filter: grayscale(100%); /* Aplica el filtro de escala de grises */
+    font-family: "Rubik", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+    /* Animación */
+    animation: fadeInUp 1.5s ease-out; /* Duración de 1.5s con un efecto suave */
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0; /* Comienza invisible */
+        transform: translateY(20px); /* Desplazado hacia abajo */
+    }
+    100% {
+        opacity: 1; /* Totalmente visible */
+        transform: translateY(0); /* Posición original */
+    }
+}
+
+/* cuando se achica la pantalla o pantalla de celular */
+@media (max-width: 1000px) {
+    .titulo {
+        width: 100%; /* Ocupa todo el ancho de la pantalla */
+        height: auto; /* Ajusta la altura automáticamente */
+        font-size: 24px; /* Reduce el tamaño de la fuente si es necesario */
+        text-align: center; /* Centra el texto */
+        padding: 20px; /* Agrega espacio interno para que se vea bien */
+    }
+}
+.menus{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    gap: 20px;
+     /* Animación */
+     animation: fadeInUp 1.5s ease-out; /* Duración de 1.5s con un efecto suave */
+}
+.imgMenu {
+    max-width: 500px; /* Tamaño máximo de cada imagen */
+    width: 100%; /* Se adapta al ancho del contenedor */
+}
+
+.imgMenu img {
+    width: 100%;
+    height: auto; /* Mantiene la proporción */
+    display: block;
+}
+
+/*Carta Cafes */
+.carta-cafe{
+    background-color:#CDB2A0;
+}
+.cartaCafes {
+    display: flex;
+    justify-content: center; /* Centra las imágenes horizontalmente */
+    align-items: center; /* Centra las imágenes verticalmente */
+    flex-direction: column; /* Permite que las imágenes se ajusten en varias filas si es necesario */
+    gap: 20px; /* Espacio entre las imágenes */
+    padding: 20px; /* Espacio interno alrededor del contenedor */
+}
+
+.cartaCafes img {
+    max-width: 500px; /* Tamaño máximo de las imágenes */
+    width: 100%; /* Se adapta al ancho del contenedor */
+    height: auto; /* Mantiene la proporción de las imágenes */
+    display: block; /* Asegura que las imágenes se comporten como bloques */
+    margin: 0 auto; /* Centra las imágenes dentro de su contenedor */
+}
+
+/*Carta Desayunos*/
+.principalsecciones{
+    display: flex;
+    justify-content: center; /* Centra las imágenes horizontalmente */
+    align-items: center; /* Centra las imágenes verticalmente */
+    flex-direction: column; /* Permite que las imágenes se ajusten en varias filas si es necesario */
+    gap: 20px; /* Espacio entre las imágenes */
+    padding-top: 20px; /* Espacio interno alrededor del contenedor */
+}
+.seccion1 img{
+    max-width: 500px; /* Tamaño máximo de las imágenes */
+    width: 100%; /* Se adapta al ancho del contenedor */
+    height: auto; /* Mantiene la proporción de las imágenes */
+    display: block; /* Asegura que las imágenes se comporten como bloques */
+    margin: 0 auto; /* Centra las imágenes dentro de su contenedor */
+}
+
+.seccion2{
+    background-color: #FAD2A6;
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px; /* Espacio alrededor del contenido */
+}
+
+.seccion2 img{
+    max-width: 500px; /* Tamaño máximo de las imágenes */
+    width: 100%; /* Se adapta al ancho del contenedor */
+    height: auto; /* Mantiene la proporción de las imágenes */
+    display: block; /* Asegura que las imágenes se comporten como bloques */
+    margin: 0 auto; /* Centra las imágenes dentro de su contenedor */
+}
+
+/* Carta Almuerzo */
+.seccion3 img{
+    max-width: 450px; /* Tamaño máximo de las imágenes */
+    width: 100%; /* Se adapta al ancho del contenedor */
+    height: auto; /* Mantiene la proporción de las imágenes */
+    display: block; /* Asegura que las imágenes se comporten como bloques */
+    margin: 0 auto; /* Centra las imágenes dentro de su contenedor */
+}
+
+.seccion4{
+    background-color: #86A386;
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px; /* Espacio alrededor del contenido */
+}
+
+.seccion4 img{
+    max-width: 450px; /* Tamaño máximo de las imágenes */
+    width: 100%; /* Se adapta al ancho del contenedor */
+    height: auto; /* Mantiene la proporción de las imágenes */
+    display: block; /* Asegura que las imágenes se comporten como bloques */
+    margin: 0 auto; /* Centra las imágenes dentro de su contenedor */
+}
+
+/* Carta Pasteleria */
+.pasteleria{
+    max-width: 450px; /* Tamaño máximo de las imágenes */
+    width: 100%; /* Se adapta al ancho del contenedor */
+    height: auto; /* Mantiene la proporción de las imágenes */
+    display: block; /* Asegura que las imágenes se comporten como bloques */
+    margin: 0 auto; /* Centra las imágenes dentro de su contenedor */
+}
+
+/* Carta bebidas */
+.bebidas{
+    background-color: #D0B1D3;
+}
+.seccion5 img{
+    max-width: 500px; /* Tamaño máximo de las imágenes */
+    width: 100%; /* Se adapta al ancho del contenedor */
+    height: auto; /* Mantiene la proporción de las imágenes */
+    display: block; /* Asegura que las imágenes se comporten como bloques */
+    margin: 0 auto; /* Centra las imágenes dentro de su contenedor */
+}
+
+/* Promos */
+.promos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 20px;
+    gap: 30px;
+}
+.promos img{
+    max-width: 500px; /* Tamaño máximo de las imágenes */
+    width: 100%; /* Se adapta al ancho del contenedor */
+    height: auto; /* Mantiene la proporción de las imágenes */
+    display: block; /* Asegura que las imágenes se comporten como bloques */
+    margin: 0 auto; /* Centra las imágenes dentro de su contenedor */
+}
